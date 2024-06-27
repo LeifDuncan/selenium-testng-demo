@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Demo Suite" verbose="1">
+  <test name="Simple Test">
+    <classes>
+      <!-- <class name="com.demo.nonstatic.tests.T00_BasicLoginPageTest"/> -->
+      <class name="com.demo.nonstatic.tests.T02_AddRemoveElementsTest"/>
+    </classes>
+  </test>
+</suite>
