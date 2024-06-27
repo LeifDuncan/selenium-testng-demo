@@ -14,6 +14,8 @@ public class P02_AddRemoveElementsPage extends Base {
     public By addBtnBy = By.xpath("//button[text()='Add Element']");
     public By deleteBtnBy = By.xpath("//button[text()='Delete']");
 
+    public int deleteBtnCount;
+
     public P02_AddRemoveElementsPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -27,7 +29,9 @@ public class P02_AddRemoveElementsPage extends Base {
     }
 
     public List<WebElement> getDeleteBtns() {
-        return driver.findElements(deleteBtnBy);
+        List<WebElement> deleteBtns = driver.findElements(deleteBtnBy);
+        deleteBtnCount = deleteBtns.size();
+        return deleteBtns;
     }
 
     public void deleteElement(int index) {

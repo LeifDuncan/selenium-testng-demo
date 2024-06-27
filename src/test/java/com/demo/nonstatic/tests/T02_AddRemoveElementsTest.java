@@ -20,6 +20,12 @@ public class T02_AddRemoveElementsTest extends Base {
     }
 
     @Test
+    public void testAddElement() {
+        addRemoveElementsPage.addElement();
+        Assert.assertTrue(addRemoveElementsPage.deleteBtnCount!=0);
+    }
+
+    @Test
     public void testMultipleAddDelete() {
         int times = TestUtils.randomIntBetween(3,5);
         
@@ -35,7 +41,7 @@ public class T02_AddRemoveElementsTest extends Base {
             TestUtils.hardWait();
         }
 
-        Assert.assertTrue(addRemoveElementsPage.getDeleteBtns().size() == 0, "Delete button should have been deleted");
+        Assert.assertTrue(addRemoveElementsPage.deleteBtnCount == 0, "Delete button should have been deleted");
 
     }
 
