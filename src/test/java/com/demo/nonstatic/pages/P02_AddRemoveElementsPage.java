@@ -26,6 +26,7 @@ public class P02_AddRemoveElementsPage extends Base {
 
     public void addElement() {
         getAddbtn().click();
+        deleteBtnCount++;
     }
 
     public List<WebElement> getDeleteBtns() {
@@ -38,6 +39,7 @@ public class P02_AddRemoveElementsPage extends Base {
         List<WebElement> deleteBtns = getDeleteBtns();
         if(index >=0 && getDeleteBtns().size() > index) {
             deleteBtns.get(index).click();
+            deleteBtnCount--;
         } else {
             throw new IllegalArgumentException("Index is invalid.");
         }

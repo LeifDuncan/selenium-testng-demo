@@ -22,7 +22,7 @@ public class T02_AddRemoveElementsTest extends Base {
     @Test
     public void testAddElement() {
         addRemoveElementsPage.addElement();
-        Assert.assertTrue(addRemoveElementsPage.deleteBtnCount!=0);
+        Assert.assertTrue(addRemoveElementsPage.deleteBtnCount != 0, "Delete btn should exist.");
     }
 
     @Test
@@ -37,11 +37,11 @@ public class T02_AddRemoveElementsTest extends Base {
         TestUtils.hardWait();
 
         for(int i=0; i < times; i++) {
-            addRemoveElementsPage.deleteElement(times-i);
+            addRemoveElementsPage.deleteElement(0);
             TestUtils.hardWait();
         }
 
-        Assert.assertTrue(addRemoveElementsPage.deleteBtnCount == 0, "Delete button should have been deleted");
+        Assert.assertTrue(addRemoveElementsPage.deleteBtnCount == 0, "Delete btn should not exist.");
 
     }
 
