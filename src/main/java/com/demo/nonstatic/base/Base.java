@@ -47,7 +47,8 @@ public class Base {
             case "chrome":
                 ChromeOptions options = new ChromeOptions();
                 options.addArguments("--remote-allow-origins=*");
-                System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver126");
+                // System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver126");
+                System.setProperty("webdriver.chrome.driver", "C:/Program Files/chromedriver-win64/chromedriver.exe");
                 driver = new ChromeDriver(options);
 
             default: 
